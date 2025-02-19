@@ -69,30 +69,9 @@ public class ProcessExecutor {
     }
 
     /**
-     * Container class for the process result.
-     */
-    public static class ProcessResult {
-        private final String output;
-        private final String errorOutput;
-        private final int exitCode;
-
-        public ProcessResult(String output, String errorOutput, int exitCode) {
-            this.output = output;
-            this.errorOutput = errorOutput;
-            this.exitCode = exitCode;
-        }
-
-        public String getOutput() {
-            return output;
-        }
-
-        public String getErrorOutput() {
-            return errorOutput;
-        }
-
-        public int getExitCode() {
-            return exitCode;
-        }
+         * Container class for the process result.
+         */
+        public record ProcessResult(String output, String errorOutput, int exitCode) {
     }
 }
 
